@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>controller</servlet-name>
+        <servlet-class>by.epam.project.hostel.controller.Controller</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>controller</servlet-name>
+        <url-pattern>/controller</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminEntry</servlet-name>
+        <jsp-file>/WEB-INF/admin/admin_entry.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminEntry</servlet-name>
+        <url-pattern>/admin/admin_entry</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserAccount</servlet-name>
+        <jsp-file>/WEB-INF/user/account.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserAccount</servlet-name>
+        <url-pattern>/user/account</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditRoom</servlet-name>
+        <jsp-file>/WEB-INF/admin/edit_guestroom.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditRoom</servlet-name>
+        <url-pattern>/admin/edit_guestroom</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddGuestroom</servlet-name>
+        <jsp-file>/WEB-INF/admin/add_guestroom.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddGuestroom</servlet-name>
+        <url-pattern>/admin/add_guestroom</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminGuestroom</servlet-name>
+        <jsp-file>/WEB-INF/admin/admin_guestrooms.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminGuestroom</servlet-name>
+        <url-pattern>/admin/admin_guestrooms</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminHostel</servlet-name>
+        <jsp-file>/WEB-INF/admin/admin_hostels.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminHostel</servlet-name>
+        <url-pattern>/admin/admin_hostels</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminUsers</servlet-name>
+        <jsp-file>/WEB-INF/admin/admin_users.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminUsers</servlet-name>
+        <url-pattern>/admin/admin_users</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminBookings</servlet-name>
+        <jsp-file>/WEB-INF/admin/admin_users_bookings.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminBookings</servlet-name>
+        <url-pattern>/admin/admin_users_bookings</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserBookings</servlet-name>
+        <jsp-file>/WEB-INF/user/user_bookings.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserBookings</servlet-name>
+        <url-pattern>/user/bookings</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserSettings</servlet-name>
+        <jsp-file>/WEB-INF/user/user_edit_sittings.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserSettings</servlet-name>
+        <url-pattern>/user/settings</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditHostel</servlet-name>
+        <jsp-file>/WEB-INF/admin/edit_hostel.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditHostel</servlet-name>
+        <url-pattern>/admin/edit_hostel</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddHotel</servlet-name>
+        <jsp-file>/WEB-INF/admin/add_hotel.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddHotel</servlet-name>
+        <url-pattern>/admin/add_hotel</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Success</servlet-name>
+        <jsp-file>/WEB-INF/admin/success</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Success</servlet-name>
+        <url-pattern>/admin/success</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BotDetect Captcha</servlet-name>
+        <servlet-class>com.captcha.botdetect.web.servlet.SimpleCaptchaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BotDetect Captcha</servlet-name>
+        <url-pattern>/botdetectcaptcha</url-pattern>
+    </servlet-mapping>
+
+    <listener>
+        <listener-class>by.epam.project.hostel.controller.listener.SessionListener</listener-class>
+    </listener>
+
+    <filter>
+        <filter-name>CheckAdminRole</filter-name>
+        <filter-class>by.epam.project.hostel.controller.filter.CheckAdminRoleFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CheckAdminRole</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>CheckUserRole</filter-name>
+        <filter-class>by.epam.project.hostel.controller.filter.CheckUserRoleFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CheckUserRole</filter-name>
+        <url-pattern>/user/*</url-pattern>
+    </filter-mapping>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/500.jsp</location>
+    </error-page>
+</web-app>

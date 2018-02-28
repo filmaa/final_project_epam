@@ -1,0 +1,105 @@
+.hide-search-button {
+    visibility: visible;
+    width: 100%;
+    background-color: #402d5c;
+    color: whitesmoke;
+    font-weight: 600;
+    height: 35px;
+    border: 2px solid whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.img-down {
+    width: 40%;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    float: left;
+}
+
+tr:nth-child(even) {
+    background-color: #987dbf;
+}
+
+.room-description {
+    color: #e4d6ff;
+}
+
+select, input[type=text], input[type=password] {
+    width: 150px;
+    height: 24px;
+    padding-left: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: initial;
+}
+
+.search-label {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.72222;
+}
+
+.search-label-error {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1.72222;
+    color: #ff0000;
+}
+
+.money {
+
+}
+
+.room-parameters {
+    /*float: right;*/
+    /*margin-left: 50%;*/
+    /*margin-right: 3%;*/
+}
+
+.search-button {
+    background-color: #402d5c;
+    color: whitesmoke;
+    font-weight: 600;
+    height: 35px;
+    border: 2px solid whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.down-pagination {
+    margin: 20px 0;
+    padding: 0;
+    color: #fff;
+    word-spacing: -.5px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.search-down {
+    padding-left: 10px;
+    padding-top: 10px;
+    display: none;
+    width: 100%;
+    background: #887ebe;
+}
+
+.criteria {
+    margin: 0 0.5% 0.5% 0;
+    padding: 0.5%;
+}
+
+.room-hotel {
+    margin: 5vh;
+    padding: 5vh 5vh 10vh 5vh;
+    background: #785eae;
+    border-radius: 10vh;
+}

@@ -1,0 +1,244 @@
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    background-color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/*input[type=text], input[type=password] {*/
+/*width: auto;*/
+/*padding: 0;*/
+/*margin: 0;*/
+/*display: flex;*/
+/*border: 1px solid #ccc;*/
+/*box-sizing: border-box;*/
+/*}*/
+
+/* Full-width input fields */
+.container input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #9eaeee;
+    color: white;
+    padding: 0 0;
+    margin: 0 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.properties > li > img {
+    width: 10px;
+    height: 10px;
+}
+
+.comment {
+    background: #9eaeee;
+    margin: 10px 50px;
+}
+
+.title {
+    font-size: 12px;
+}
+
+.search {
+    display: none;
+    width: 100%;
+    background: lightcyan;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.page-content {
+    padding: 30px;
+    margin: 30px;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+tr:nth-child(even) {
+    background-color: #987dbf;
+}
+
+.properties {
+    color: white;
+}
+
+.footer {
+    padding: 20px 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4c266d;
+    color: #f1f1f1;
+    text-align: center;
+    /*margin-top: calc(100 - 70px);*/
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+.head-navbar {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background: #9eaeee;
+    text-align: center;
+}
+
+.head-navbar > li {
+    display: inline;
+}
+
+.head-navbar > li > a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px;
+}
+
+.carousel-inner > .item > img {
+    height: 87%;
+    width: 100%;
+    margin: auto;
+}
+
+.head-navbar > li > a:hover {
+    background-color: #0066FF;
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd
+}
+
+th {
+    background-color: #999999;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+}
+
+body {
+    background-color: #583e7e;
+}
